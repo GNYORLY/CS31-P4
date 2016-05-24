@@ -1,0 +1,44 @@
+Project 4                             Jeannie Chiem
+
+	I found this project very tedious due to how many functions we had to make. Most of them were quite simple, but there were a few that gave me problems.
+The functions that I found difficult to code was the subsequence and split functions. For the subsequence function, I spent a lot of time debugging mistakes
+in my code. It was my own mistake for writing out the whole code before testing it. The split function was by far the most time consuming part of this whole
+project for me. I spent a lot of time trying to figure out how to do it before actually starting. The way I made the split function was by using the shift
+left concept in the shiftLeft function. This whole project required a great number of loops that made me confused at times, especially when debugging the
+mistakes in the code. I found myself a lot less focused when coding this project as opposed to the other ones due to the number of different functions required.
+I feel that I may have made more mistakes in this project because of it. It was also tedious to test each function. Despite this, I found this project easier 
+than the previous one.
+
+				-----TEST DATA-----
+
+	string a[] = { " hi", " ho", " wazzap", " bird" };
+	string ab[] = { " hi buddy", " ho buddy", " wazzap buddy", " bird" };
+	assert(appendToAll(a, -1, " buddy") == -1);
+	appendToAll(a, 3, " buddy");
+	cout << a[0] << a[1] << a[2] << a[3] << endl;    //testing appendToAll function
+	
+	assert(lookup(a, 4, " bird") == 3);       //testing lookup function
+	assert(lookup(a, 4, "jk") == -1);	  //testing lookup function when string does not exist in array
+	
+	string h[7] = { "bernie", "hillary", "donald", "jeb", "", "carly", "ben" };
+	assert(lookup(h, 7, "carly") == 5);
+	assert(lookup(h, 7, "donald") == 2);
+	assert(lookup(h, 2, "donald") == -1);     //testing lookup function
+	
+	assert(positionOfMax(h, 7) == 3);	  //testing position of max function
+
+	string g[4] = { "bernie", "hillary", "jeb", "carly" };
+	assert(differ(h, 4, g, 4) == 2);           //testing differ function
+	assert(appendToAll(g, 4, "?") == 4 && g[0] == "bernie?" && g[3] == "carly?"); //testing appendToAll function
+	assert(rotateLeft(g, 4, 1) == 1 && g[1] == "jeb?" && g[3] == "hillary?");  //testing rotateLeft function
+	
+	string e[4] = { "donald", "jeb", "", "carly" };
+	assert(subsequence(h, 7, e, 4) == 2);   				//testing subsequence function
+	string d[5] = { "hillary", "hillary", "hillary", "ben", "ben" };
+	assert(countRuns(d, 5) == 2); 						//testing countRuns function
+	string f[3] = { "jeb", "donald", "marco" };
+	assert(lookupAny(h, 7, f, 3) == 2); 					//testing lookupAny function
+	assert(flip(f, 3) == 3 && f[0] == "marco" && f[2] == "jeb");		//testing flip function
+
+	assert(split(h, 7, "carly") == 3); 					//testing split function
+	cout << h[0] << h[1] << h[2] << h[3] << h[4] << h[5] << h[6] << endl;   //checking array for split function
